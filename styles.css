@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    position: fixed;
+    background-color: salmon;
+    z-index: 2;
+    width: 100%;
+}
+
+section {
+    position: relative;
+    border-bottom: 1px solid black;
+    min-height: 500px;
+    padding-bottom: 30px !important;
+    padding: 30px !important;
+}
+
+.intro {
+    position: relative;
+    background-image: url("/public/bg.png");
+    background-size: cover;
+}
+
+.transition-border {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    z-index: 2;
+}
+
+.hero-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.profile-photo-container {
+    height: 220px;
+    width: 220px;
+    background-color: rgba(225,16,146, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+}
+
+.name-container {
+    margin-left: 5%;
+    display: flex;
+    white-space: nowrap;
+}
+
+.name {
+    color: white;
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+}
+
+.intro-title {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    color: white;
+    font-size: 48px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    white-space: nowrap;
+    padding-right: 2rem;
+    /* display: flex; */
+    /* padding: 15vw; */
+}
+
+.hero-content p {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 24px;
+    padding-top: 4rem;
+    animation-name: hero-text;
+    animation-duration: 2s;
+    font-weight: 300;
+}
+
+.about {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-color: rgb(156,16,146);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 1760px;
+    gap: 25px;
+}
+
+.about-description {
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: center;
+}
+
+.about-description h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.skills {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.about > h2 {
+    padding-top: 25px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 0.4rem;
+}
+
+.bar {
+    width: 120px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: rgb(231,16,146);
+    margin: 1rem auto 1rem auto;
+    flex-shrink: 0;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.skills li {
+    padding: 10px;
+    font-size: 24px;
+    white-space: nowrap;
+    background-color: rgb(106,16,146);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.skills h2 {
+    font-size: 28px;
+}
+
+.skills .bar {
+    width: 60px;
+}
+
+.portfolio {
+    background-color: rgb(106,16,146);
+    font-family: "Roboto", sans-serif;
+    color: white;
+    padding-bottom: 72px !important;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio > h2 {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.portfolio-image-container {
+    height: 220px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: rgb(156,16,146);
+}
+
+.portfolio-image-container:hover {
+    opacity: 0.75;
+    transition: ease-in 0.1s;
+}
+
+.portfolio-image-container img {
+    border-radius: 100%;
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 1;
+    padding-top: 10px;
+}
+
+.portfolio-item-description {
+    max-width: 50%;
+}
+
+.portfolio-item-description h2 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.portfolio-item-description p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.relevant-skills {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.relevant-skills h3 {
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.relevant-skills ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.relevant-skills li {
+    padding: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: rgb(156,16,146);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.contact {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    background-color: rgb(156,16,146);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 75px !important;
+}
+
+.contact > h2 {
+    padding-top: 25px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 0.4rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1720px;
+    gap: 50px;
+    flex: 1;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1280px) {
+    .portfolio {
+        max-height: unset;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        min-height: 60vh;
+    }
+    .intro {
+
+    }
+
+    .hero-header {
+        min-height: 220px;
+    }
+
+    .hero-content {
+        width: 65%;
+    }
+
+    .intro-title {
+        font-size: 72px;
+        /* padding-top: 160px; */
+        white-space: normal;
+        gap: 1rem;
+        align-self: flex-start;
+    }
+
+    .intro-title span:first-child {
+        animation-name: intro-text;
+        animation-duration: 1000ms;
+        margin-left: -5rem;
+    }
+
+    .profile-photo-container {
+        animation-name: profile-photo-animation;
+        animation-duration: 500ms;
+    }
+
+    .about-container {
+        flex-direction: row;
+        padding: 3rem 20px 0 20px;
+    }
+
+    .about-description {
+        flex: 1;
+    }
+
+    .skills {
+        flex: 1;
+        align-self: flex-start;
+    }
+}
+
+@keyframes intro-text {
+    0% {margin-left: 0;}
+    50% {margin-left: 0;}
+    to {margin-left: -5rem;}
+}
+
+@keyframes profile-photo-animation {
+    from {opacity: 0; margin-top: -3rem;}
+    to {opacity: 1; margin-top: 0;}
+}
+
+@keyframes hero-text {
+    from {opacity: 0;}
+    50% {opacity: 0;}
+    to {opacity: 1;}
+}
